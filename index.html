@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="个人主页 - 开发者 & 创造者">
+  <title>个人主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">HOME</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-text="关于">关于</a></li>
+        <li><a href="#skills" data-text="技能">技能</a></li>
+        <li><a href="#projects" data-text="项目">项目</a></li>
+        <li><a href="#contact" data-text="联系">联系</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== Hero 区 ==================== -->
+  <section class="hero" id="hero">
+    <!-- 动态视频背景 -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/妹子回眸z.mp4" type="video/mp4">
+    </video>
+
+    <!-- 遮罩层 -->
+    <div class="hero-overlay"></div>
+
+    <!-- 扫描线效果 -->
+    <div class="scanlines"></div>
+
+    <!-- 粒子网格装饰 -->
+    <div class="grid-overlay"></div>
+
+    <!-- 主要内容 -->
+    <div class="hero-content">
+      <div class="hero-glitch" data-text="你好，我是">
+        <span class="hero-greeting typing-text" id="typingText"></span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="name-char" style="animation-delay: 0s">彭</span>
+        <span class="name-char" style="animation-delay: 0.1s">琦</span>
+        <span class="name-char" style="animation-delay: 0.2s">炜</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        <span class="subtitle-prefix">&gt;</span>
+        <span class="subtitle-text">电子游戏爱好者 / AI AGENT学习者 / 终身学习者</span>
+        <span class="cursor-blink">_</span>
+      </p>
+
+      <!-- 实时时钟 -->
+      <div class="clock-wrapper">
+        <div class="clock-label">SYS.TIME</div>
+        <div class="clock-display" id="clock">0000-00-00 00:00:00</div>
+        <div class="clock-timezone">UTC+8</div>
+      </div>
+
+      <!-- 快捷操作按钮 -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn-neon btn-neon-primary">
+          <span>查看项目</span>
+        </a>
+        <a href="#contact" class="btn-neon btn-neon-secondary">
+          <span>联系我</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 向下滚动指示 -->
+    <div class="scroll-indicator">
+      <span class="scroll-text">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 关于我 ==================== -->
+  <section class="section about" id="about">
+    <div class="section-container">
+      <h2 class="section-title">
+        <span class="title-hash">#</span> 关于我
+        <span class="title-line"></span>
+      </h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-intro">
+            <span class="text-accent">&gt;</span> 你好！我是一名充满热情的西南交大智慧学院学生。
+          </p>
+          <p>
+            在平时，我喜欢电子游戏和动漫番剧，偶尔也会了解一些国际要闻，从网游到单机，国创到日漫，国
+            际制裁到合作都有涉猎。
+          </p>
+          <p>
+            目前我专注于 <span class="text-highlight">AI Agent学习</span>、
+            <span class="text-highlight">Node.js单片机应用</span> 
+            <span class="text-highlight"></span>
+            始终在寻找下一个有趣的挑战。
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">年经验</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="1">0</span>
+              <span class="stat-label">完成项目</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="0">0</span>
+              <span class="stat-label">开源贡献</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-filename">about.me.json</span>
+            </div>
+            <div class="code-body">
+              <pre><code>{
+  <span class="code-key">"name"</span>: <span class="code-string">"彭琦炜"</span>,
+  <span class="code-key">"role"</span>: <span class="code-string">"全栈开发者"</span>,
+  <span class="code-key">"location"</span>: <span class="code-string">"中国"</span>,
+  <span class="code-key">"languages"</span>: [
+    <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"Python"</span>,
+    <span class="code-string">"Rust"</span>
+  ],
+  <span class="code-key">"interests"</span>: [
+    <span class="code-string">"Open Source"</span>,
+    <span class="code-string">"AI/ML"</span>,
+    <span class="code-string">"Game Dev"</span>
+  ],
+  <span class="code-key">"status"</span>: <span class="code-string">"coding..."</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 技能标签 ==================== -->
+  <section class="section skills" id="skills">
+    <div class="section-container">
+      <h2 class="section-title">
+        <span class="title-hash">#</span> 技能树
+        <span class="title-line"></span>
+      </h2>
+
+      <div class="skills-categories">
+
+        <!-- 前端 -->
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon">&#9670;</span> 前端开发
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Three.js</span>
+          </div>
+        </div>
+
+        <!-- 后端 -->
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon">&#9670;</span> 后端开发
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- 工具 & 其他 -->
+        <div class="skill-category">
+          <h3 class="category-title">
+            <span class="category-icon">&#9670;</span> 工具 &amp; 其他
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Webpack</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 项目经历 ==================== -->
+  <section class="section projects" id="projects">
+    <div class="section-container">
+      <h2 class="section-title">
+        <span class="title-hash">#</span> 项目经历
+        <span class="title-line"></span>
+      </h2>
+
+      <div class="projects-grid">
+
+        <!-- 项目卡片 1 -->
+        <article class="project-card">
+          <div class="card-header">
+            <span class="card-folder">📁</span>
+            <span class="card-links">
+              <a href="#" class="card-link" title="GitHub" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              </a>
+            </span>
+          </div>
+          <h3 class="card-title">智能水质监测系统</h3>
+          <p class="card-desc">内置集成探测的便携式水质监测器，可远程接受水质数据并进行实时分析。</p>
+          <div class="card-tags">
+            <span>Arduino UNO</span>
+          </div>
+          <div class="card-time">2026.05 — 2026.06</div>
+        </article>
+
+        <!-- 项目卡片 2 -->
+        <article class="project-card">
+          <div class="card-header">
+            <span class="card-folder">📁</span>
+            <span class="card-links">
+              <a href="#" class="card-link" title="GitHub" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              </a>
+            </span>
+          </div>
+          <h3 class="card-title">AI Agent 辅助开发个人主页</h3>
+          <p class="card-desc">使用 Claude Code AI Agent 辅助设计并开发的赛博朋克风格个人主页，包含视频动态背景、实时时钟、项目展示等功能。</p>
+          <div class="card-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>AI Agent</span>
+          </div>
+          <div class="card-time">2026.07.03</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 联系方式 ==================== -->
+  <section class="section contact" id="contact">
+    <div class="section-container">
+      <h2 class="section-title">
+        <span class="title-hash">#</span> 联系我
+        <span class="title-line"></span>
+      </h2>
+
+      <p class="contact-intro">
+        <span class="text-accent">&gt;</span> 无论是有趣的项目合作、技术交流，还是只是想打个招呼，都欢迎联系我！
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:your-email@example.com" class="contact-item" title="邮箱">
+          <div class="contact-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          </div>
+          <span class="contact-label">邮箱</span>
+          <span class="contact-value">2494659498@qq.com</span>
+        </a>
+
+        <a href="https://github.com" class="contact-item" target="_blank" rel="noopener" title="GitHub">
+          <div class="contact-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          </div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/username</span>
+        </a>
+
+        <a href="#" class="contact-item" title="Blog">
+          <div class="contact-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <span class="contact-label">微信</span>
+          <span class="contact-value">pqw19958792227/span>
+        </a>
+
+        <a href="#" class="contact-item" title="LinkedIn">
+          <div class="contact-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </div>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/username</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">HOME</span>
+          <span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">首页</a>
+          <a href="#about">关于</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#contact">联系</a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> All Rights Reserved.</p>
+        <p class="footer-tagline">用 <span class="footer-heart">&#9825;</span> 设计与构建</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
