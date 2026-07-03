@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initActiveNavLink();
   initCurrentYear();
+  initAnimeImage();
 });
 
 // ============================================================
@@ -300,4 +301,23 @@ function initCurrentYear() {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+}
+
+// ============================================================
+// 随机《日常》壁纸
+// ============================================================
+function initAnimeImage() {
+  const img = document.getElementById('animeImage');
+  if (!img) return;
+
+  const nichijouImages = [
+    'https://konachan.net/image/cd84d9a9552fef5bb9bd17af00642512/Konachan.com%20-%20244967%20blue_eyes%20gradient%20hakase_%28nichijou%29%20long_hair%20nichijou%20orange_hair%20vector.png',
+    'https://konachan.net/image/0e49d22d46b11b1e8e2f936daf652bc4/Konachan.com%20-%20375836%20animal%20cat%20delatoid%20dog%20grass%20kagura%20kamineko%20kneehighs%20long_hair%20mayaa%20nichijou%20petals%20sakaki%20shade%20shirt%20skirt%20spring%20tadakichi%20tree%20twintails.png',
+    'https://konachan.net/image/516d980fe43bebd44323121d48a70bf5/Konachan.com%20-%20231401%20animal%20black_eyes%20black_hair%20cat%20cropped%20drink%20hakase_%28nichijou%29%20nichijou%20novcel%20school_uniform%20shinonome_nano%20short_hair%20skirt%20tie.jpg',
+    'https://konachan.net/image/1bd90cc3a28a5b1d9df2b5c572597090/Konachan.com%20-%20244806%20animal%20cat%20nichijou%20no_humans%20sakamoto_%28nichijou%29%20vector.png',
+    'https://konachan.net/image/934c6487e23cbd4fb06da786331fa372/Konachan.com%20-%20244964%20black_eyes%20black_hair%20close%20glasses%20gradient%20minakami_mai%20nichijou%20vector.png',
+  ];
+
+  const randomIndex = Math.floor(Math.random() * nichijouImages.length);
+  img.src = nichijouImages[randomIndex];
 }
