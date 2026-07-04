@@ -1,0 +1,18 @@
+# 大文件（超过GitHub 100MB限制）
+*.pkg
+*.mp4
+*.gif
+*.png
+
+# Wallpaper Engine源文件
+3025975631/
+
+# 临时文件
+find-window.ps1
+frame_test.png
+background.mp4
+background.gif
+
+# 系统文件
+desktop.ini
+Thumbs.db
